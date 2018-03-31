@@ -151,7 +151,7 @@ class App extends Component {
 
                  <h4>A total of {this.state.tokensRemaining * 100}% of all ATT tokens have been sold from the contract</h4>
                   <Progress percent={this.state.tokensRemaining} indicating />
-                 <h4>{this.state.contractBalance} of {this.state.creationCap} ATT tokens Sold</h4>
+                 <h4>{web3.utils.fromWei(this.state.contractBalance.toString(10), "ether")} of {web3.utils.fromWei(this.state.creationCap.toString(10), "ether")} ATT tokens Sold</h4>
 
 
                   {this.state.message}
